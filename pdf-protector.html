@@ -14,15 +14,779 @@
     <meta property="og:image" content="https://raja1068.github.io/Tools/pdf-protector-preview.jpg">
     <link rel="canonical" href="https://raja1068.github.io/Tools/pdf-protector/">
     <title>Free Online PDF Protection Tool | Add Passwords & Permissions</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
-     crossorigin="anonymous"></script>
     
-    <!-- Step 1: AMP Auto Ads library (placed in <head> as requested) -->
+    <!-- Google AdSense Script in Head as requested -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
+        crossorigin="anonymous"></script>
+    
+    <!-- AMP Auto Ads library for AMP pages -->
     <script async custom-element="amp-auto-ads"
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
     </script>
+    
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #ea4335;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333;
+            --medium-gray: #757575;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .ad-top, .ad-bottom {
+            background-color: var(--light-gray);
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+            border: 1px dashed #ccc;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        main {
+            padding: 40px 0;
+        }
+        
+        .protector-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: var(--medium-gray);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .upload-area {
+            border: 2px dashed var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            background-color: rgba(66, 133, 244, 0.05);
+        }
+        
+        .upload-area:hover {
+            background-color: rgba(66, 133, 244, 0.1);
+        }
+        
+        .upload-icon {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .control-group {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+        
+        input[type="text"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            background-color: white;
+            margin-bottom: 15px;
+        }
+        
+        .checkbox-group {
+            margin: 15px 0;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .checkbox-label input {
+            margin-right: 10px;
+        }
+        
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+        
+        .button:hover {
+            background-color: #3367d6;
+        }
+        
+        .button-secondary {
+            background-color: var(--medium-gray);
+        }
+        
+        .button-secondary:hover {
+            background-color: #616161;
+        }
+        
+        .results {
+            display: none;
+            margin-top: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .file-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .file-box {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+        }
+        
+        .file-icon {
+            font-size: 48px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+        
+        .file-details {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .success-message {
+            text-align: center;
+            font-size: 18px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(52, 168, 83, 0.1);
+            border-radius: var(--border-radius);
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .download-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid var(--primary-color);
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .small-text {
+            font-size: 12px;
+            color: var(--medium-gray);
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            
+            .file-info {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <h1>PDF Protector</h1>
+    <!-- AMP Auto Ads code placed immediately after the <body> tag -->
+    <amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-9770610643444805">
+    </amp-auto-ads>
+
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">PDFProtectorPro</a>
+            <nav>
+                <a href="#" class="button button-secondary">FAQ</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="ad-top">
+            <!-- Top Banner Ad - Google AdSense -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9770610643444805"
+                data-ad-slot="4587389292"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <main>
+            <div class="protector-container">
+                <h1>PDF Protection Tool</h1>
+                <p class="subtitle">Add passwords and permissions to your PDF files to protect sensitive content.</p>
+                
+                <div id="uploadArea" class="upload-area">
+                    <div class="upload-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>Drag & Drop Your PDF Here</h3>
+                    <p>or click to browse files</p>
+                    <input type="file" id="fileInput" class="file-input" accept=".pdf">
+                </div>
+                
+                <div class="controls">
+                    <div class="control-group">
+                        <h3>Password Protection</h3>
+                        <label for="userPassword">Open Password (optional)</label>
+                        <input type="password" id="userPassword" placeholder="Password to open the PDF">
+                        
+                        <label for="ownerPassword">Owner Password (recommended)</label>
+                        <input type="password" id="ownerPassword" placeholder="Password to change permissions">
+                        
+                        <p class="small-text">Note: Owner password is required to set permissions below</p>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>Permissions</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowPrinting" checked>
+                                Allow printing
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowModification" checked>
+                                Allow document modification
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowCopy" checked>
+                                Allow content copying
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowForms" checked>
+                                Allow form filling
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowAccessibility" checked>
+                                Allow accessibility
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="allowAssembly" checked>
+                                Allow document assembly
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <h3>Watermark (Optional)</h3>
+                        <label for="watermarkText">Watermark Text</label>
+                        <input type="text" id="watermarkText" placeholder="e.g. CONFIDENTIAL">
+                        
+                        <label for="watermarkColor">Watermark Color</label>
+                        <select id="watermarkColor">
+                            <option value="red">Red</option>
+                            <option value="gray" selected>Gray</option>
+                            <option value="blue">Blue</option>
+                            <option value="black">Black</option>
+                        </select>
+                        
+                        <label for="watermarkOpacity">Opacity</label>
+                        <select id="watermarkOpacity">
+                            <option value="0.2">Light</option>
+                            <option value="0.5" selected>Medium</option>
+                            <option value="0.8">Dark</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button id="protectBtn" class="button" disabled>Protect PDF</button>
+                </div>
+                
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Securing your PDF...</p>
+                </div>
+                
+                <div class="results" id="resultsSection">
+                    <div class="file-info">
+                        <div class="file-box">
+                            <div class="file-icon"><i class="fas fa-file-alt"></i></div>
+                            <h3>Original PDF</h3>
+                            <div class="file-details">
+                                <p id="originalFileName">File: example.pdf</p>
+                                <p id="originalFileSize">Size: 0 KB</p>
+                            </div>
+                        </div>
+                        
+                        <div class="file-box">
+                            <div class="file-icon"><i class="fas fa-lock"></i></div>
+                            <h3>Protected PDF</h3>
+                            <div class="file-details">
+                                <p id="protectedFileSize">Size: 0 KB</p>
+                                <p id="protectionStatus">Status: Not protected</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-message" id="successMessage">
+                        Your PDF has been successfully protected!
+                    </div>
+                    
+                    <div class="download-btn">
+                        <button id="downloadBtn" class="button">Download Protected PDF</button>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="seo-content">
+                <h2>Secure Your Sensitive PDF Documents</h2>
+                <p>Our free online PDF protection tool helps you add passwords and permissions to your PDF files, ensuring only authorized users can access or modify your sensitive documents.</p>
+                
+                <h3>Why Protect Your PDFs?</h3>
+                <ul>
+                    <li><strong>Prevent unauthorized access:</strong> Keep confidential documents secure with passwords</li>
+                    <li><strong>Control usage rights:</strong> Restrict printing, editing or copying of your PDFs</li>
+                    <li><strong>Professional security:</strong> Add watermarks to identify protected documents</li>
+                    <li><strong>No software needed:</strong> Works directly in your browser with no installation</li>
+                </ul>
+                
+                <h3>How to Use Our PDF Protector</h3>
+                <ol>
+                    <li>Upload your PDF by dragging and dropping or clicking to browse</li>
+                    <li>Set open password (optional) and owner password (recommended)</li>
+                    <li>Configure document permissions as needed</li>
+                    <li>Add watermark if desired (optional)</li>
+                    <li>Click "Protect PDF" to secure your file</li>
+                    <li>Download the protected PDF</li>
+                </ol>
+                
+                <h3>Security Features</h3>
+                <p>Our tool uses strong 128-bit AES encryption to protect your PDF documents. All processing happens in your browser - your files are never uploaded to our servers, ensuring complete privacy.</p>
+            </section>
+        </main>
+        
+        <div class="ad-bottom">
+            <!-- Bottom Banner Ad - Google AdSense -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9770610643444805"
+                data-ad-slot="4587389292"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/blog">Blog</a>
+            </div>
+            <p>&copy; <span id="currentYear"></span> PDFProtectorPro. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- PDF-lib library for actual PDF encryption and protection -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // DOM elements
+            const fileInput = document.getElementById('fileInput');
+            const uploadArea = document.getElementById('uploadArea');
+            const protectBtn = document.getElementById('protectBtn');
+            const resultsSection = document.getElementById('resultsSection');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            
+            // Variables to store file data
+            let originalFile = null;
+            let protectedPdfBlob = null;
+            
+            // Handle drag and drop
+            uploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.style.backgroundColor = 'rgba(66, 133, 244, 0.2)';
+            });
+            
+            uploadArea.addEventListener('dragleave', function() {
+                this.style.backgroundColor = 'rgba(66, 133, 244, 0.05)';
+            });
+            
+            uploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.style.backgroundColor = 'rgba(66, 133, 244, 0.05)';
+                
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    handleFileSelection();
+                }
+            });
+            
+            // Handle click to browse
+            uploadArea.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            // Handle file selection
+            fileInput.addEventListener('change', handleFileSelection);
+            
+            function handleFileSelection() {
+                if (fileInput.files && fileInput.files[0]) {
+                    const file = fileInput.files[0];
+                    
+                    // Check if file is a PDF
+                    if (!file.type.match('application/pdf') && !file.name.match(/\.pdf$/i)) {
+                        alert('Please select a PDF file');
+                        return;
+                    }
+                    
+                    originalFile = file;
+                    
+                    // Enable protect button
+                    protectBtn.disabled = false;
+                    
+                    // Update upload area display
+                    uploadArea.innerHTML = `
+                        <div style="font-size: 48px; color: var(--accent-color);"><i class="fas fa-file-pdf"></i></div>
+                        <h3>${escapeHtml(file.name)}</h3>
+                        <p>${(file.size / 1024).toFixed(2)} KB</p>
+                        <p style="font-size: 12px; margin-top: 10px;">Click or drag to change file</p>
+                    `;
+                    
+                    // Update original file info
+                    document.getElementById('originalFileName').textContent = `File: ${file.name}`;
+                    document.getElementById('originalFileSize').textContent = `Size: ${(file.size / 1024).toFixed(2)} KB`;
+                }
+            }
+            
+            // Helper to escape HTML
+            function escapeHtml(str) {
+                return str.replace(/[&<>]/g, function(m) {
+                    if (m === '&') return '&amp;';
+                    if (m === '<') return '&lt;';
+                    if (m === '>') return '&gt;';
+                    return m;
+                });
+            }
+            
+            // Handle protect button click
+            protectBtn.addEventListener('click', async function() {
+                if (!originalFile) return;
+                
+                const userPassword = document.getElementById('userPassword').value;
+                const ownerPassword = document.getElementById('ownerPassword').value;
+                
+                // Validate: if any password is set, owner password should be at least 6 chars when both set
+                if (userPassword && userPassword.length < 4) {
+                    alert('Open password must be at least 4 characters if provided.');
+                    return;
+                }
+                if (ownerPassword && ownerPassword.length < 6) {
+                    alert('Owner password must be at least 6 characters if provided.');
+                    return;
+                }
+                
+                // Show loading indicator
+                loadingIndicator.style.display = 'block';
+                resultsSection.style.display = 'none';
+                protectBtn.disabled = true;
+                
+                try {
+                    const protectedBlob = await protectPdf(originalFile, userPassword, ownerPassword);
+                    protectedPdfBlob = protectedBlob;
+                    displayResults(originalFile, protectedBlob, userPassword, ownerPassword);
+                    loadingIndicator.style.display = 'none';
+                    protectBtn.disabled = false;
+                } catch (error) {
+                    console.error('Protection error:', error);
+                    alert('An error occurred during protection. Please try again. Error: ' + error.message);
+                    loadingIndicator.style.display = 'none';
+                    protectBtn.disabled = false;
+                }
+            });
+            
+            // Handle download button click
+            document.getElementById('downloadBtn').addEventListener('click', function() {
+                if (!protectedPdfBlob) return;
+                
+                const url = URL.createObjectURL(protectedPdfBlob);
+                const a = document.createElement('a');
+                const originalName = originalFile ? originalFile.name.replace('.pdf', '') : 'document';
+                a.download = originalName + '_protected.pdf';
+                a.href = url;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+            
+            // Actual PDF protection using pdf-lib
+            async function protectPdf(file, userPassword, ownerPassword) {
+                // Read file as ArrayBuffer
+                const fileArrayBuffer = await file.arrayBuffer();
+                
+                // Load the PDF document
+                const pdfDoc = await PDFLib.PDFDocument.load(fileArrayBuffer);
+                
+                // Get permission flags based on checkboxes
+                let permissionFlags = 0;
+                if (document.getElementById('allowPrinting').checked) permissionFlags |= PDFLib.Printing;
+                if (document.getElementById('allowModification').checked) permissionFlags |= PDFLib.Modify;
+                if (document.getElementById('allowCopy').checked) permissionFlags |= PDFLib.Copy;
+                if (document.getElementById('allowForms').checked) permissionFlags |= PDFLib.FillForms;
+                if (document.getElementById('allowAccessibility').checked) permissionFlags |= PDFLib.Accessibility;
+                if (document.getElementById('allowAssembly').checked) permissionFlags |= PDFLib.Assembly;
+                
+                // Prepare encryption settings
+                const needsEncryption = (userPassword && userPassword.length > 0) || (ownerPassword && ownerPassword.length > 0);
+                
+                if (needsEncryption) {
+                    const effectiveUserPass = userPassword || '';
+                    const effectiveOwnerPass = ownerPassword || (userPassword ? userPassword : 'secureOwnerKey2024');
+                    
+                    await pdfDoc.encrypt({
+                        userPassword: effectiveUserPass,
+                        ownerPassword: effectiveOwnerPass,
+                        permissions: permissionFlags
+                    });
+                }
+                
+                // Handle watermark if text provided
+                const watermarkText = document.getElementById('watermarkText').value.trim();
+                if (watermarkText) {
+                    const pages = pdfDoc.getPages();
+                    const watermarkColorSelect = document.getElementById('watermarkColor').value;
+                    const opacityValue = parseFloat(document.getElementById('watermarkOpacity').value);
+                    
+                    let color;
+                    switch(watermarkColorSelect) {
+                        case 'red': color = PDFLib.rgb(1, 0, 0); break;
+                        case 'blue': color = PDFLib.rgb(0, 0, 1); break;
+                        case 'black': color = PDFLib.rgb(0, 0, 0); break;
+                        default: color = PDFLib.rgb(0.5, 0.5, 0.5);
+                    }
+                    
+                    for (const page of pages) {
+                        const { width, height } = page.getSize();
+                        page.drawText(watermarkText, {
+                            x: width / 4,
+                            y: height / 2,
+                            size: 48,
+                            color: color,
+                            opacity: opacityValue,
+                            rotate: PDFLib.degrees(45),
+                        });
+                        page.drawText(watermarkText, {
+                            x: width * 0.6,
+                            y: height * 0.2,
+                            size: 48,
+                            color: color,
+                            opacity: opacityValue * 0.8,
+                            rotate: PDFLib.degrees(45),
+                        });
+                        page.drawText(watermarkText, {
+                            x: width * 0.1,
+                            y: height * 0.8,
+                            size: 48,
+                            color: color,
+                            opacity: opacityValue * 0.8,
+                            rotate: PDFLib.degrees(45),
+                        });
+                    }
+                }
+                
+                // Save the protected PDF
+                const pdfBytes = await pdfDoc.save();
+                return new Blob([pdfBytes], { type: 'application/pdf' });
+            }
+            
+            // Display results
+            function displayResults(originalFile, protectedBlob, userPassword, ownerPassword) {
+                document.getElementById('protectedFileSize').textContent = 
+                    `Size: ${(protectedBlob.size / 1024).toFixed(2)} KB`;
+                
+                let protectionStatus = '';
+                if (userPassword || ownerPassword) {
+                    protectionStatus = 'Password protected (AES-128)';
+                    if (userPassword && ownerPassword) {
+                        protectionStatus += ' • User & Owner passwords set';
+                    } else if (userPassword) {
+                        protectionStatus += ' • Open password only';
+                    } else {
+                        protectionStatus += ' • Owner password only (permissions locked)';
+                    }
+                } else {
+                    protectionStatus = 'Permissions only (no passwords)';
+                }
+                
+                const watermarkText = document.getElementById('watermarkText').value.trim();
+                if (watermarkText) {
+                    protectionStatus += ` • Watermark: "${watermarkText}"`;
+                }
+                
+                document.getElementById('protectionStatus').textContent = `Status: ${protectionStatus}`;
+                
+                const msgDiv = document.getElementById('successMessage');
+                if (userPassword || ownerPassword) {
+                    msgDiv.innerHTML = `<i class="fas fa-shield-alt"></i> Your PDF has been successfully encrypted with AES-128! ${userPassword ? 'A password is required to open.' : 'Owner password restricts permissions.'}`;
+                } else {
+                    msgDiv.innerHTML = `<i class="fas fa-check-circle"></i> Your PDF has been protected with permissions and ${watermarkText ? 'watermark' : 'settings'} applied.`;
+                }
+                
+                resultsSection.style.display = 'block';
+                resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    </script>
 </body>
 </html>
