@@ -10,10 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="google-adsense-account" content="pub-9770610643444805">
+    
+    <!-- Google AdSense Script (placed inside <head> as required) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
      crossorigin="anonymous"></script>
     
-    <!-- Google AdSense AMP Auto Ads Library (Step 1) -->
+    <!-- Google AdSense AMP Auto Ads Library -->
     <script async custom-element="amp-auto-ads"
             src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
     </script>
@@ -342,6 +344,52 @@
             transform: translateX(5px);
         }
 
+        /* AdSense In-Feed Ad Styling */
+        .ad-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+            background: linear-gradient(145deg, #ffffff, #f8f9fc);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .ad-inside {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .ad-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        /* Footer ad banner */
+        .footer-ad-container {
+            max-width: 1000px;
+            margin: 0 auto 30px auto;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 15px 10px;
+            text-align: center;
+            backdrop-filter: blur(2px);
+        }
+        
+        .footer-ad-label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
         /* Accordion Styles - NEW */
         .accordion-section {
             padding: 60px 0 40px;
@@ -500,269 +548,385 @@
             height: 2px;
             background: var(--primary);
         }
+        
+        .footer-col a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: 0.2s;
+            font-size: 0.9rem;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .tools-grid { grid-template-columns: 1fr; }
+            .ad-card { min-height: 250px; }
+        }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container header-container">
-            <a href="/" class="logo">
-                <i class="fas fa-toolbox logo-icon"></i>
-                <span class="logo-text">Tool<span>Kit</span></span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#tools">Tools</a></li>
-                    <li><a href="about-us.html">About</a></li>
-                    <li><a href="privacy-policy.html">Privacy</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-9770610643444805">
+</amp-auto-ads>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Welcome to <span>ToolKit</span></h1>
-                <p>Free online tools to compress, convert, and enhance your images and PDFs</p>
-                <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Search tools...">
-                    <button onclick="searchTools()">Search</button>
-                </div>
-                <div class="cta-buttons">
-                    <a href="#tools" class="btn btn-primary">Explore Tools</a>
-                    <a href="about-us.html" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-        </section>
+<header>
+    <div class="container header-container">
+        <a href="/" class="logo">
+            <i class="fas fa-toolbox logo-icon"></i>
+            <span class="logo-text">Tool<span>Kit</span></span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="privacy-policy.html">Privacy</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        <section class="all-tools-section" id="tools">
-            <div class="container">
-                <div class="section-header">
-                    <h2>All Tools</h2>
-                    <p>A comprehensive collection of free online tools for your image and PDF needs</p>
-                </div>
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <div class="tool-icon">📁</div>
-                        <div class="tool-info">
-                            <h3>Image Compressor</h3>
-                            <p>Reduce image file size without losing quality</p>
-                            <a href="img-compressor.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">🔄</div>
-                        <div class="tool-info">
-                            <h3>Image Converter</h3>
-                            <p>Convert images to different formats</p>
-                            <a href="img-converter.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📸</div>
-                        <div class="tool-info">
-                            <h3>Image Resizer</h3>
-                            <p>Resize images for any platform</p>
-                            <a href="img-resizer.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">✨</div>
-                        <div class="tool-info">
-                            <h3>Image Enhancer</h3>
-                            <p>Improve image quality automatically</p>
-                            <a href="img-enhancer.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">🖼️</div>
-                        <div class="tool-info">
-                            <h3>Photo Collage Maker</h3>
-                            <p>Create beautiful photo collages</p>
-                            <a href="img-collage-maker.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📄</div>
-                        <div class="tool-info">
-                            <h3>Image to PDF</h3>
-                            <p>Convert images to PDF documents</p>
-                            <a href="img-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📊</div>
-                        <div class="tool-info">
-                            <h3>Excel to PDF</h3>
-                            <p>Convert Excel files to PDF</p>
-                            <a href="excel-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📄</div>
-                        <div class="tool-info">
-                            <h3>Word to PDF</h3>
-                            <p>Convert Word documents to PDF</p>
-                            <a href="word-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">🖼️</div>
-                        <div class="tool-info">
-                            <h3>PDF to Image</h3>
-                            <p>Convert PDF pages to images</p>
-                            <a href="pdf-to-jpg.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📝</div>
-                        <div class="tool-info">
-                            <h3>PDF to Word</h3>
-                            <p>Convert PDF to editable Word documents</p>
-                            <a href="pdf-to-word.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📊</div>
-                        <div class="tool-info">
-                            <h3>PDF to Excel</h3>
-                            <p>Extract tables from PDF to Excel</p>
-                            <a href="pdf-to-excel.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">🔗</div>
-                        <div class="tool-info">
-                            <h3>PDF Merger</h3>
-                            <p>Combine multiple PDFs into one</p>
-                            <a href="pdf-merger.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">📦</div>
-                        <div class="tool-info">
-                            <h3>PDF Compressor</h3>
-                            <p>Reduce PDF file size</p>
-                            <a href="pdf-compressor.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <div class="tool-icon">🔒</div>
-                        <div class="tool-info">
-                            <h3>PDF Protector</h3>
-                            <p>Add passwords to your PDFs</p>
-                            <a href="pdf-protector.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="accordion-section">
-            <div class="container">
-                <h2 style="text-align: center; margin-bottom: 30px;">Why Choose ToolKit?</h2>
-                <div class="accordion-container">
-                    <button class="accordion-btn">
-                        <span>100% Free & No Registration</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <i class="fas fa-lock"></i>
-                                <h4>Secure</h4>
-                                <p>Files processed locally, never stored on servers</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="accordion-btn">
-                        <span>Fast & Efficient Processing</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <i class="fas fa-bolt"></i>
-                                <h4>Lightning Fast</h4>
-                                <p>Optimized algorithms for quick processing</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="accordion-btn">
-                        <span>High Quality Output</span>
-                        <span class="accordion-icon">▼</span>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="features-grid">
-                            <div class="feature-item">
-                                <i class="fas fa-star"></i>
-                                <h4>Premium Quality</h4>
-                                <p>Maintains high quality while optimizing files</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+<main>
+    <section class="hero">
         <div class="container">
-            <div class="footer-container">
-                <div class="footer-col">
-                    <h3>About</h3>
-                    <a href="about-us.html">About Us</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Blog</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Legal</h3>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-of-service.html">Terms of Service</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Tools</h3>
-                    <a href="img-compressor.html">Image Tools</a>
-                    <a href="pdf-compressor.html">PDF Tools</a>
-                </div>
+            <h1>Welcome to <span>ToolKit</span></h1>
+            <p>Free online tools to compress, convert, and enhance your images and PDFs</p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search tools...">
+                <button onclick="searchTools()">Search</button>
             </div>
-            <div style="text-align: center; padding-top: 20px; border-top: 1px solid #555;">
-                <p>&copy; 2025 ToolKit. All rights reserved. | Powered by Masoom India Tech</p>
+            <div class="cta-buttons">
+                <a href="#tools" class="btn btn-primary">Explore Tools</a>
+                <a href="about-us.html" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Accordion functionality
-        const buttons = document.querySelectorAll('.accordion-btn');
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                const icon = this.querySelector('.accordion-icon');
-                content.classList.toggle('open');
-                icon.classList.toggle('rotated');
-            });
+    <section class="all-tools-section" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Tools</h2>
+                <p>A comprehensive collection of free online tools for your image and PDF needs</p>
+            </div>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tool 1 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📁</div>
+                    <div class="tool-info">
+                        <h3>Image Compressor</h3>
+                        <p>Reduce image file size without losing quality</p>
+                        <a href="img-compressor.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 2 -->
+                <div class="tool-card">
+                    <div class="tool-icon">🔄</div>
+                    <div class="tool-info">
+                        <h3>Image Converter</h3>
+                        <p>Convert images to different formats</p>
+                        <a href="img-converter.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 3 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📸</div>
+                    <div class="tool-info">
+                        <h3>Image Resizer</h3>
+                        <p>Resize images for any platform</p>
+                        <a href="img-resizer.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Ad Slot 1 - In-grid advertisement -->
+                <div class="ad-card">
+                    <div class="ad-inside">
+                        <div class="ad-label">Advertisement</div>
+                        <!-- AdSense ad unit will be displayed here -->
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-9770610643444805"
+                             data-ad-slot="1234567890"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+                <!-- Tool 4 -->
+                <div class="tool-card">
+                    <div class="tool-icon">✨</div>
+                    <div class="tool-info">
+                        <h3>Image Enhancer</h3>
+                        <p>Improve image quality automatically</p>
+                        <a href="img-enhancer.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 5 -->
+                <div class="tool-card">
+                    <div class="tool-icon">🖼️</div>
+                    <div class="tool-info">
+                        <h3>Photo Collage Maker</h3>
+                        <p>Create beautiful photo collages</p>
+                        <a href="img-collage-maker.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 6 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📄</div>
+                    <div class="tool-info">
+                        <h3>Image to PDF</h3>
+                        <p>Convert images to PDF documents</p>
+                        <a href="img-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Ad Slot 2 - Second grid ad -->
+                <div class="ad-card">
+                    <div class="ad-inside">
+                        <div class="ad-label">Sponsored</div>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-9770610643444805"
+                             data-ad-slot="9876543210"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+                <!-- Tool 7 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <div class="tool-info">
+                        <h3>Excel to PDF</h3>
+                        <p>Convert Excel files to PDF</p>
+                        <a href="excel-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 8 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📄</div>
+                    <div class="tool-info">
+                        <h3>Word to PDF</h3>
+                        <p>Convert Word documents to PDF</p>
+                        <a href="word-to-pdf.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 9 -->
+                <div class="tool-card">
+                    <div class="tool-icon">🖼️</div>
+                    <div class="tool-info">
+                        <h3>PDF to Image</h3>
+                        <p>Convert PDF pages to images</p>
+                        <a href="pdf-to-jpg.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 10 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <div class="tool-info">
+                        <h3>PDF to Word</h3>
+                        <p>Convert PDF to editable Word documents</p>
+                        <a href="pdf-to-word.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 11 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <div class="tool-info">
+                        <h3>PDF to Excel</h3>
+                        <p>Extract tables from PDF to Excel</p>
+                        <a href="pdf-to-excel.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 12 -->
+                <div class="tool-card">
+                    <div class="tool-icon">🔗</div>
+                    <div class="tool-info">
+                        <h3>PDF Merger</h3>
+                        <p>Combine multiple PDFs into one</p>
+                        <a href="pdf-merger.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Ad Slot 3 - Third ad within grid -->
+                <div class="ad-card">
+                    <div class="ad-inside">
+                        <div class="ad-label">Promotion</div>
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-9770610643444805"
+                             data-ad-slot="5544332211"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+                <!-- Tool 13 -->
+                <div class="tool-card">
+                    <div class="tool-icon">📦</div>
+                    <div class="tool-info">
+                        <h3>PDF Compressor</h3>
+                        <p>Reduce PDF file size</p>
+                        <a href="pdf-compressor.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Tool 14 -->
+                <div class="tool-card">
+                    <div class="tool-icon">🔒</div>
+                    <div class="tool-info">
+                        <h3>PDF Protector</h3>
+                        <p>Add passwords to your PDFs</p>
+                        <a href="pdf-protector.html" class="tool-link">Open Tool <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 30px;">Why Choose ToolKit?</h2>
+            <div class="accordion-container">
+                <button class="accordion-btn">
+                    <span>100% Free & No Registration</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-lock"></i>
+                            <h4>Secure</h4>
+                            <p>Files processed locally, never stored on servers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="accordion-btn">
+                    <span>Fast & Efficient Processing</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-bolt"></i>
+                            <h4>Lightning Fast</h4>
+                            <p>Optimized algorithms for quick processing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="accordion-btn">
+                    <span>High Quality Output</span>
+                    <span class="accordion-icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-star"></i>
+                            <h4>Premium Quality</h4>
+                            <p>Maintains high quality while optimizing files</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <!-- Footer Adsense Banner Unit integrated tastefully -->
+        <div class="footer-ad-container">
+            <div class="footer-ad-label">Advertisement • Support our free tools</div>
+            <ins class="adsbygoogle"
+                 style="display:block; width:100%; min-height:90px"
+                 data-ad-client="ca-pub-9770610643444805"
+                 data-ad-slot="7788990011"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>About</h3>
+                <a href="about-us.html">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <h3>Tools</h3>
+                <a href="img-compressor.html">Image Tools</a>
+                <a href="pdf-compressor.html">PDF Tools</a>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 20px; border-top: 1px solid #555;">
+            <p>&copy; 2025 ToolKit. All rights reserved. | Powered by Masoom India Tech</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Accordion functionality
+    const buttons = document.querySelectorAll('.accordion-btn');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('.accordion-icon');
+            content.classList.toggle('open');
+            icon.classList.toggle('rotated');
         });
+    });
 
-        // Search functionality
-        function searchTools() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const tools = document.querySelectorAll('.tool-card');
-            
-            tools.forEach(tool => {
-                const title = tool.querySelector('h3').textContent.toLowerCase();
-                const description = tool.querySelector('p').textContent.toLowerCase();
-                
+    // Search functionality with dynamic hiding (includes ad cards staying visible but tools get filtered)
+    function searchTools() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+        const allItems = document.querySelectorAll('.tools-grid > div');
+        
+        allItems.forEach(item => {
+            // Check if it's a tool card (has .tool-card) otherwise keep ad cards always visible
+            if (item.classList && item.classList.contains('tool-card')) {
+                const title = item.querySelector('h3')?.textContent.toLowerCase() || '';
+                const description = item.querySelector('p')?.textContent.toLowerCase() || '';
                 if (title.includes(searchInput) || description.includes(searchInput)) {
-                    tool.style.display = 'flex';
+                    item.style.display = 'flex';
                 } else {
-                    tool.style.display = 'none';
+                    item.style.display = 'none';
                 }
-            });
+            } else if (item.classList && item.classList.contains('ad-card')) {
+                // Always display ad slots, but ensure they don't break layout
+                item.style.display = 'flex';
+            } else {
+                // fallback for any other direct children
+                if (item.style) item.style.display = '';
+            }
+        });
+    }
+    
+    // Trigger initial AdSense ads refresh on dynamic content (optional, ensures ads load)
+    window.addEventListener('load', function() {
+        if (typeof (adsbygoogle) !== 'undefined') {
+            try {
+                // In case any ads were not pushed properly due to dynamic injection, reinitialize
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            } catch(e) {}
         }
-    </script>
+    });
+</script>
 </body>
 </html>
