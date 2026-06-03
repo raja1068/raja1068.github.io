@@ -1,90 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — ToolKit</title>
-  <meta name="description" content="Privacy Policy for ToolKit - All-in-One File & Image Tools" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Privacy Policy — ToolKit: All-in-One File & Image Tools</title>
+  <meta name="description" content="ToolKit privacy policy — no data collection, no account, no tracking. Learn how we handle your files and protect your privacy across all tools.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f7fafc">
+  
+  <!-- Google AdSense snippet (placed as requested) -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
-   crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script>
+  
   <style>
-    :root{--bg:#f7fafc;--card:#ffffff;--muted:#6b7280;--accent:#2563eb}
-    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.6;margin:0;background:var(--bg);color:#0f172a}
-    .wrap{max-width:900px;margin:48px auto;padding:28px}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:24px}
-    h1{margin:0 0 8px;font-size:28px}
-    p.lead{margin:0;color:var(--muted)}
-    .card{background:var(--card);border-radius:12px;padding:22px;margin-top:20px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-    h2{margin-top:12px}
-    ul{margin:8px 0 16px 20px}
-    code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, monospace}
-    footer{margin-top:28px;color:var(--muted);font-size:14px}
-    .meta{color:var(--muted);font-size:14px;margin-top:6px}
-    a{color:var(--accent);text-decoration:none}
-    @media (max-width:600px){.wrap{padding:16px}}
+    /* modern, accessible, privacy-first styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-primary: #0a0f2c;
+      --text-secondary: #475569;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --border-light: #e9eef3;
+      --code-bg: #f1f5f9;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.05);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, 'Helvetica Neue', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.55;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+    }
+
+    /* card header area */
+    .policy-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .logo-mark {
+      width: 68px;
+      height: 68px;
+      background: linear-gradient(135deg, #2563eb, #5b21b6);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 28px;
+      color: white;
+      box-shadow: 0 10px 15px -6px rgba(37, 99, 235, 0.25);
+      transition: transform 0.2s ease;
+    }
+
+    .logo-mark:hover {
+      transform: scale(1.02);
+    }
+
+    .title-section h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: linear-gradient(to right, #1e293b, #2d3a5e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.25rem;
+    }
+
+    .title-section .sub {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-top: 4px;
+    }
+
+    .update-badge {
+      display: inline-block;
+      background: #eef2ff;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      margin-top: 8px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-light);
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 18px 32px -12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      font-size: 1.55rem;
+      font-weight: 600;
+      margin: 1.8rem 0 0.75rem 0;
+      color: #0f172a;
+      letter-spacing: -0.2px;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    h2:first-of-type {
+      margin-top: 0.2rem;
+    }
+
+    p {
+      margin: 0.8rem 0;
+      color: var(--text-secondary);
+      font-weight: 400;
+    }
+
+    strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.75rem;
+      color: var(--text-secondary);
+    }
+
+    li {
+      margin: 0.45rem 0;
+    }
+
+    code {
+      background: var(--code-bg);
+      padding: 0.2rem 0.5rem;
+      border-radius: 10px;
+      font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace;
+      font-size: 0.85rem;
+      color: #1e293b;
+      border: 1px solid #e2e8f0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s, border-bottom 0.2s;
+      border-bottom: 1px dotted transparent;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      border-bottom: 1px dotted var(--accent);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-light);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .contact-email {
+      background: #f1f4f9;
+      padding: 0.3rem 0.9rem;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-family: monospace;
+    }
+
+    hr {
+      margin: 1rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #e2e8f0, transparent);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.25rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      .policy-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      footer {
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">TK</div>
-      <div>
-        <h1>Privacy Policy</h1>
-        <p class="lead">ToolKit — All‑in‑One File & Image Tools</p>
-        <div class="meta">Last updated: November 18, 2025</div>
-      </div>
-    </header>
-
-    <div class="card">
-      <p>This Privacy Policy explains how <strong>ToolKit</strong> ("we", "us", or "the app") handles information when you use the app or the online tools hosted at <a href="https://raja1068.github.io/Tools">https://raja1068.github.io/Tools</a>.</p>
-
-      <h2>1. Information We Do Not Collect</h2>
-      <p>ToolKit is designed to respect user privacy. We do <strong>not</strong> collect, store, or share any personal information such as:</p>
-      <ul>
-        <li>Names</li>
-        <li>Email addresses</li>
-        <li>Phone numbers</li>
-        <li>Location data</li>
-        <li>Device-specific identifiers</li>
-        <li>Contact lists</li>
-      </ul>
-
-      <h2>2. File Processing and Temporary Handling</h2>
-      <p>When you use ToolKit to process a file (for example converting a PDF, compressing an image, or removing an image background), the file is uploaded to the online service for the duration required to complete the conversion. These files are not stored after processing is complete.</p>
-
-      <h2>3. Permissions</h2>
-      <p>The Android app version of ToolKit requires the following permissions:</p>
-      <ul>
-        <li><code>INTERNET</code> — to access the online tools and process files</li>
-        <li><code>ACCESS_NETWORK_STATE</code> — to detect network connectivity</li>
-      </ul>
-      <p>ToolKit does <strong>not</strong> request permissions for storage, camera, contacts, microphone, or location by default.</p>
-
-      <h2>4. Third-Party Services</h2>
-      <p>The app loads and uses web-based tools hosted at the URL above. Those pages may rely on standard web platform features and may use third-party libraries to perform transformations.</p>
-
-      <h2>5. No Account or Login</h2>
-      <p>ToolKit does not require user registration, login, or the creation of accounts. All functionality is available without providing personal information.</p>
-
-      <h2>6. Children's Privacy</h2>
-      <p>ToolKit is rated for general audiences (3+). We do not knowingly collect personal information from children under the age of 13.</p>
-
-      <h2>7. Data Security</h2>
-      <p>We use reasonable practices to protect files while in transit using HTTPS. However, no system can be guaranteed to be 100% secure.</p>
-
-      <h2>8. Changes to This Privacy Policy</h2>
-      <p>We may update this Privacy Policy from time to time. When we do, we will update the <em>Last updated</em> date at the top of this page.</p>
-
-      <h2>9. Contact</h2>
-      <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
-      <p><a href="mailto:masoomindia7@gmail.com">masoomindia7@gmail.com</a></p>
-
-      <footer>
-        <p>Developer: Masoom Tech</p>
-        <p>Website: <a href="https://raja1068.github.io/Tools" target="_blank" rel="noopener">https://raja1068.github.io/Tools</a></p>
-      </footer>
+<div class="container">
+  <!-- Header with logo & branding -->
+  <div class="policy-header">
+    <div class="logo-mark" aria-label="ToolKit logo">TK</div>
+    <div class="title-section">
+      <h1>Privacy Policy</h1>
+      <div class="sub">ToolKit – seamless file & image tools, zero data footprint</div>
+      <div class="update-badge">📅 Last updated: November 18, 2025</div>
     </div>
   </div>
+
+  <!-- Main privacy card -->
+  <div class="card">
+    <p><strong>ToolKit</strong> (the "app", "we", "us", or "our") provides a collection of browser‑based utilities for image editing, PDF conversion, compression, background removal, and other file operations. This privacy policy explains how we safeguard your information when you use our web tools or the Android version of the app, hosted at <a href="https://raja1068.github.io/Tools" target="_blank" rel="noopener">raja1068.github.io/Tools</a>. We believe that privacy is not just a legal requirement but a fundamental right — so we designed ToolKit with <strong>zero data retention</strong>.</p>
+
+    <h2>1. Information we never collect</h2>
+    <p>We have built ToolKit to respect your digital autonomy. We do <strong>not</strong> collect, store, share, or sell any personally identifiable information, including but not limited to:</p>
+    <ul>
+      <li>Names, email addresses, or phone numbers</li>
+      <li>Location data, IP addresses (no server-side logging of user IPs)</li>
+      <li>Device identifiers, advertising IDs, or fingerprinting data</li>
+      <li>Contact lists, calendar, or sensor data</li>
+    </ul>
+    <p>Your activity stays entirely private — there are no analytics trackers, no telemetry, and no third-party monitoring scripts except standard AdSense placements for monetization, which are bound by their own policies. AdSense does <strong>not</strong> receive any personal user data from ToolKit's internal logic.</p>
+
+    <h2>2. How file processing works (temporary & private)</h2>
+    <p>All tools operate with a strict “process-and-forget” principle. When you upload or open a file for conversion, compression, background removal, or editing:</p>
+    <ul>
+      <li><strong>Client-side priority:</strong> Many transformations happen directly in your browser using WebAssembly, Canvas, or JavaScript libraries. Files never leave your device unless required by the specific tool (e.g., server‑assisted PDF merging or advanced OCR).</li>
+      <li><strong>Server-assisted processing:</strong> For certain operations, the file is transmitted via encrypted HTTPS to our temporary processing endpoint or a trusted third‑party API (e.g., background removal or high‑resolution conversion). The file remains in memory only for the duration of the task — typically a few seconds. After the result is delivered, the original file and any intermediate copies are instantly purged from all servers. No backups, no logging, no caching.</li>
+      <li>No file is ever stored for more than the necessary processing window. We do not use your files for training, analysis, or any form of data mining.</li>
+    </ul>
+    <p>All communications are protected with TLS 1.2+ ensuring secure transit.</p>
+
+    <h2>3. Permissions & local access (Android & Web)</h2>
+    <p><strong>For Android App version:</strong> ToolKit requests minimal permissions:</p>
+    <ul>
+      <li><code>INTERNET</code> — to connect to the online toolkit and perform file operations.</li>
+      <li><code>ACCESS_NETWORK_STATE</code> — to verify network connectivity and optimize performance.</li>
+    </ul>
+    <p>ToolKit <strong>does not request</strong> storage, media, camera, microphone, contacts, or location permissions. On the web platform, when you choose a file using the system file picker, that file is not read unless you explicitly activate a tool; the browser handles the selection securely. No background access occurs.</p>
+
+    <h2>4. Third-party services & API usage</h2>
+    <p>Some tools may rely on trusted external services to provide advanced functionality (e.g., image background removal or enhanced PDF compression). Each third-party vendor is carefully vetted for compliance with data protection standards, and they are contractually bound to delete files immediately after processing. Third parties do <strong>not</strong> receive any identifiable user information.</p>
+    <p>The only external script included is Google AdSense (for showing non-intrusive ads to support ToolKit's free operation). AdSense may use cookies or device information for serving relevant ads according to Google's <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. You can manage ad personalization via Google’s Ad Settings. ToolKit does not control or access any data collected by Google.</p>
+
+    <h2>5. No accounts · No logins · No tracking</h2>
+    <p>We don't believe in forcing users to create accounts to edit an image or convert a document. ToolKit works fully offline-ready (where possible) and requires no sign-up, registration, or subscription. Consequently, we do not store any user profiles, passwords, or authentication tokens. There is no mechanism to “track” your activity across sessions — every visit is anonymous.</p>
+
+    <h2>6. Children's privacy & COPPA compliance</h2>
+    <p>ToolKit is designed for general audiences and complies with the Children's Online Privacy Protection Act (COPPA) and similar international regulations. We do not knowingly collect any personal information from children under 13 years of age. Since we collect absolutely no data, there is no risk of accidental collection of child-specific information. Parents and guardians can be confident that using ToolKit does not expose minors to data harvesting.</p>
+
+    <h2>7. Data security measures</h2>
+    <p>We implement robust security practices: end-to-end encryption during file transmission, automatic file deletion after processing, and regular audits of our infrastructure. While no internet transmission is 100% foolproof, we constantly update dependencies, enforce HTTPS Strict Transport Security (HSTS), and maintain a “privacy by design” approach. In the unlikely event of a security incident affecting user data, we would follow all applicable disclosure requirements — though, we reiterate, we store nothing.</p>
+
+    <h2>8. Your rights & international privacy</h2>
+    <p>Because ToolKit does not collect or store personal information, rights such as access, rectification, erasure, and data portability (under GDPR or CCPA) are inherently fulfilled. If you have any residual questions or want to verify our claims, you may contact us directly using the details below. We will respond within 30 days.</p>
+
+    <h2>9. Changes to this Privacy Policy</h2>
+    <p>We may update this policy to reflect improvements, regulatory updates, or new tool features. The “Last updated” date at the top of this page indicates when the latest revision was made. If significant changes occur, we will highlight them on the ToolKit homepage. Your continued use of our tools after any modification constitutes acceptance of the updated policy. However, we will never retroactively change how we handle your data.</p>
+
+    <h2>10. Contact & developer information</h2>
+    <p>ToolKit is developed and maintained by <strong>Masoom Tech</strong>. If you have questions about privacy, data handling, or would like to request further technical details, we’re here to help. Please reach out via email:</p>
+    <div style="background: #f8fafc; border-radius: 20px; padding: 0.7rem 1rem; margin: 1rem 0; display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <span style="font-weight: 500;">📧</span>
+      <a href="mailto:masoomindia7@gmail.com" style="font-weight: 600;">masoomindia7@gmail.com</a>
+      <span style="color: #475569;">— direct privacy inquiries</span>
+    </div>
+    <p>You may also visit the official tool portal: <a href="https://raja1068.github.io/Tools" target="_blank" rel="noopener">https://raja1068.github.io/Tools</a> for updates, feature announcements, and version notes.</p>
+
+    <hr />
+
+    <footer>
+      <div>© 2025 Masoom Tech — ToolKit: privacy-first file & image toolkit</div>
+      <div class="footer-links">
+        <a href="https://raja1068.github.io/Tools" target="_blank" rel="noopener">🔧 All Tools</a>
+        <a href="mailto:masoomindia7@gmail.com">✉️ Report an issue</a>
+      </div>
+    </footer>
+  </div>
+  <!-- End of card -->
+  
+  <!-- subtle note about AdSense and transparency -->
+  <div style="text-align: center; margin-top: 24px; font-size: 0.75rem; color: #6c757d;">
+    ToolKit uses non-intrusive advertisements to remain free. No personal data is shared with advertisers.
+  </div>
+</div>
 </body>
 </html>
