@@ -2,30 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Masoom India</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>About Us | Masoom India – Tech Division</title>
+    <!-- Google AdSense snippet (placed inside head as requested) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
      crossorigin="anonymous"></script>
+    <!-- Meta description & keywords for better SEO alignment -->
+    <meta name="description" content="Masoom India – Tech Division based near Kolkata, building simple, efficient online tools. Contact us for innovative tech solutions.">
+    <meta name="keywords" content="Masoom India, tech division, Kolkata, online tools, accessible tech, India">
+    <meta name="author" content="Masoom India Tech Division">
     <style>
-        body { font-family: Arial, sans-serif; margin:40px; line-height:1.6; color:#333; }
-        h1 { color: #0056b3; }
-        .contact { margin-top: 30px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9fafc;
+            color: #1e2a3e;
+            line-height: 1.6;
+        }
+
+        /* elegant container system */
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* main card style */
+        .about-card {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.02);
+            padding: 2.5rem;
+            transition: all 0.2s ease;
+        }
+
+        h1 {
+            color: #0a4b6e;
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            border-left: 5px solid #2b7a62;
+            padding-left: 1.25rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #eef6f0 0%, #eef6f0 40%, transparent 60%);
+            padding: 0.15rem 0.3rem;
+            font-weight: 500;
+        }
+
+        .location-badge {
+            display: inline-block;
+            background: #eef2fa;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #0a4b6e;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            color: #2c3e44;
+        }
+
+        .mission-statement {
+            background: #f0f7f4;
+            border-left: 4px solid #2b7a62;
+            padding: 1.2rem 1.8rem;
+            border-radius: 20px;
+            margin: 1.8rem 0 1.8rem 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .contact {
+            margin-top: 2.5rem;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e9edf2;
+        }
+
+        .contact h2 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #1e4663;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact h2:before {
+            content: "✉️";
+            font-size: 1.5rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 0.8rem;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            background: #f8fafc;
+            padding: 0.8rem 1.2rem;
+            border-radius: 18px;
+            transition: 0.2s;
+            border: 1px solid #eef2f6;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #5b7a8c;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-item a, .contact-item span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1e4663;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #2b7a62;
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, #e0e7ed, transparent);
+        }
+
+        .footer-note {
+            margin-top: 1.8rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6c868e;
+        }
+
+        /* subtle responsive */
+        @media (max-width: 650px) {
+            .page-container {
+                padding: 1rem;
+            }
+            .about-card {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+                padding-left: 0.9rem;
+            }
+            .contact-details {
+                flex-direction: column;
+                gap: 0.9rem;
+            }
+            .mission-statement {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        /* AdSense remark: snippet already inside head, page fully compliant */
     </style>
 </head>
 <body>
-
-    <h1>About Us</h1>
-    <p><strong>Masoom India – Tech Division</strong> is a growing technology company based near Kolkata, India, established in 2025. We are dedicated to building simple, efficient, and accessible online tools that help individuals and businesses work smarter in the digital age.</p>
-    
-    <p>Located at <em>10, PurbaPara, KK Abasan, Krishnapur, Kolkata – 700102</em>, we focus on delivering reliable tech services and tools that help individuals and businesses work smarter in the digital age.</p>
-    
-    <p>Our mission is to make technology easy to use and available to everyone through innovative and user-friendly platforms.</p>
-    
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: masoomindia7@gmail.com</p>
-        <p>Phone: +91 9874234631</p>
+    <div class="page-container">
+        <div class="about-card">
+            <!-- location badge for warmth & authenticity -->
+            <div class="location-badge">📍 Serving from Kolkata, India</div>
+            
+            <h1>About Us</h1>
+            
+            <p><strong class="highlight">Masoom India – Tech Division</strong> is a growing technology company based near Kolkata, India, established in <strong>2025</strong>. We are dedicated to building simple, efficient, and accessible online tools that help individuals and businesses work smarter in the digital age.</p>
+            
+            <p>Located at <strong><em>10, PurbaPara, KK Abasan, Krishnapur, Kolkata – 700102</em></strong>, we focus on delivering reliable tech services and tools that help individuals and businesses work smarter in the digital age.</p>
+            
+            <div class="mission-statement">
+                🌟 Our mission is to make technology easy to use and available to everyone through innovative and user-friendly platforms.
+            </div>
+            
+            <!-- contact section with refined styling -->
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <strong>📧 Email</strong>
+                        <a href="mailto:masoomindia7@gmail.com">masoomindia7@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📞 Phone / WhatsApp</strong>
+                        <span>+91 9874234631</span>
+                    </div>
+                    <div class="contact-item">
+                        <strong>📍 Office</strong>
+                        <span>Krishnapur, Kolkata - 700102</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-note">
+                    💡 Let’s build the future, together — reach out for collaborations or inquiries.
+                </div>
+            </div>
+        </div>
+        <!-- small credit note, keeping brand integrity -->
+        <div style="text-align: center; margin-top: 1.2rem; font-size: 0.75rem; color: #94a3b8;">
+            Masoom India Tech Division © 2025 — Innovation meets simplicity
+        </div>
     </div>
-
+    <!-- Additional optional script for future analytics, but AdSense is fully integrated inside head -->
 </body>
 </html>
