@@ -4,58 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Masoom India Tools</title>
+    <!-- Google AdSense snippet added between <head> tags -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9770610643444805"
      crossorigin="anonymous"></script>
     <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 30px 20px;
             line-height: 1.7;
-            color: #333;
-            background-color: #f9f9f9;
+            color: #1e2a3e;
+            background: linear-gradient(145deg, #f4f7fc 0%, #eef2f5 100%);
+            min-height: 100vh;
         }
 
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 0 auto;
             background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 2.5rem 2rem;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+            backdrop-filter: blur(0px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
+        /* Typography improvements */
         h1 {
-            color: #0056b3;
+            color: #0a4b7a;
             text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #e2e8f0;
+            display: inline-block;
+            width: auto;
+        }
+
+        .header-wrap {
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         h2 {
-            color: #333;
-            margin-top: 25px;
+            color: #1e4663;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            border-left: 5px solid #3b82f6;
+            transition: 0.1s linear;
         }
 
         p {
-            margin: 10px 0;
+            margin: 1rem 0;
+            color: #2c3e44;
+            font-size: 1rem;
         }
 
         ul {
-            margin-left: 20px;
+            margin: 1rem 0 1rem 2rem;
+            list-style-type: square;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            color: #2c3e44;
         }
 
         .footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #777;
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            font-size: 0.85rem;
+            color: #5b6e8c;
+            border-top: 1px solid #e2edf2;
+            letter-spacing: 0.3px;
         }
 
         a {
-            color: #0056b3;
+            color: #2c6e9e;
             text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #bdd4e7;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #0f4c6f;
+            text-decoration: none;
+            border-bottom: 1px solid #0f4c6f;
+        }
+
+        .contact-block {
+            background: #f0f6fe;
+            padding: 1.2rem 1.5rem;
+            border-radius: 24px;
+            margin: 1.8rem 0 1rem;
+            display: inline-block;
+            width: 100%;
+            border: 1px solid #d9e6f5;
+        }
+
+        .contact-block p {
+            margin: 0.3rem 0;
+        }
+
+        .badge-note {
+            background: #eef2ff;
+            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            display: inline-block;
+            color: #2563eb;
+            font-weight: 500;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px;
+            }
+            .container {
+                padding: 1.8rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            h2 {
+                font-size: 1.35rem;
+            }
+        }
+
+        /* subtle highlight for updates */
+        .highlight-date {
+            background: #eef2ff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -63,52 +159,59 @@
 <body>
 
 <div class="container">
-
-    <h1>Terms of Service</h1>
-    <p><strong>Last Updated:</strong> March 2026</p>
+    <div class="header-wrap">
+        <h1>📄 Terms of Service</h1>
+        <p style="margin-top: 12px;"><span class="badge-note">Masoom India Tools — Fair & Transparent</span></p>
+        <p><strong>Last Updated:</strong> <span class="highlight-date">March 2026</span></p>
+    </div>
 
     <p>Welcome to <strong>Masoom India Tools</strong> ("we", "our", or "us"). By accessing or using our website 
-    <a href="https://raja1068.github.io/Tools/" target="_blank">https://raja1068.github.io/Tools/</a>, 
+    <a href="https://raja1068.github.io/Tools/" target="_blank" rel="noopener noreferrer">https://raja1068.github.io/Tools/</a>, 
     you agree to be bound by these Terms of Service. If you do not agree, please do not use our website.</p>
 
     <h2>1. Use of Website</h2>
-    <p>Our website provides free online tools and resources. You agree to use the website only for lawful purposes and in a way that does not harm, disrupt, or interfere with other users.</p>
+    <p>Our website provides free online tools and resources intended to simplify digital tasks. You agree to use the website only for lawful purposes and in a way that does not harm, disrupt, or interfere with other users or the integrity of the services provided.</p>
 
     <h2>2. User Responsibilities</h2>
     <ul>
-        <li>Do not use the website for illegal or unauthorized purposes.</li>
-        <li>Do not attempt to hack, damage, or disrupt the website.</li>
-        <li>Do not upload or share harmful files, malware, or malicious code.</li>
+        <li>Do not use the website for illegal or unauthorized purposes, including any violation of applicable laws in India or internationally.</li>
+        <li>Do not attempt to hack, damage, disrupt, or reverse-engineer any part of the website or its underlying infrastructure.</li>
+        <li>Do not upload or share harmful files, malware, viruses, or any malicious code that may impair website performance.</li>
+        <li>Respect other users' privacy and refrain from collecting personal data through automated means.</li>
     </ul>
 
     <h2>3. Intellectual Property</h2>
-    <p>All content on this website, including tools, design, text, and graphics, is the property of Masoom India unless otherwise stated. You may not copy, reproduce, or redistribute content without permission.</p>
+    <p>All content on this website, including tools, design, text, graphics, logos, and underlying software, is the property of Masoom India unless otherwise stated. You may not copy, reproduce, distribute, or create derivative works without explicit written permission. However, you may share links to our tools for non-commercial purposes as long as proper attribution is given.</p>
 
     <h2>4. Disclaimer</h2>
-    <p>All tools and services are provided "as is" without any warranties. We do not guarantee accuracy, reliability, or uninterrupted availability of the website.</p>
+    <p>All tools and services are provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not guarantee accuracy, reliability, uninterrupted availability, or that results obtained from tools will meet your expectations. Use of tools is at your sole risk.</p>
 
     <h2>5. Limitation of Liability</h2>
-    <p>We are not responsible for any direct or indirect damages resulting from the use or inability to use our website or tools.</p>
+    <p>To the fullest extent permitted by applicable law, Masoom India and its affiliates, developers, or contributors shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages resulting from the use or inability to use our website or tools, even if advised of the possibility of such damages.</p>
 
-    <h2>6. Third-Party Services</h2>
-    <p>Our website may include links or integrations with third-party services. We are not responsible for their content or policies.</p>
+    <h2>6. Third-Party Services & Ads</h2>
+    <p>Our website may include links or integrations with third-party services, advertiser content, or external references. We are not responsible for their content, privacy policies, or practices. Additionally, we may display advertisements provided by Google AdSense or other partners; interactions with those ads are governed by the respective third-party terms.</p>
 
     <h2>7. Changes to Terms</h2>
-    <p>We may update these Terms of Service at any time. Continued use of the website means you accept the updated terms.</p>
+    <p>We reserve the right to update or modify these Terms of Service at any time without prior notice. The latest version will always be posted on this page with the "Last Updated" date. Continued use of the website after any changes constitutes acceptance of the updated terms.</p>
 
-    <h2>8. Governing Law</h2>
-    <p>These terms are governed by the laws of India. Any disputes will be subject to the jurisdiction of Kolkata, India.</p>
+    <h2>8. Governing Law & Dispute Resolution</h2>
+    <p>These terms are governed by and construed in accordance with the laws of India. Any disputes, claims, or controversies arising out of or relating to these Terms or the use of the website shall be subject to the exclusive jurisdiction of the courts located in <strong>Kolkata, India</strong>. Both parties agree to attempt good-faith negotiation before initiating any legal proceedings.</p>
 
     <h2>9. Contact Us</h2>
-    <p>If you have any questions, contact us at:</p>
-    <p>Email: <a href="mailto:masoomindia7@gmail.com">masoomindia7@gmail.com</a></p>
-    <p>Phone: +91 9874234631</p>
-
-    <div class="footer">
-        <p>&copy; 2026 Masoom India - Tech Division</p>
+    <div class="contact-block">
+        <p>📧 Email: <a href="mailto:masoomindia7@gmail.com">masoomindia7@gmail.com</a></p>
+        <p>📞 Phone: <strong>+91 9874234631</strong></p>
+        <p>🏢 Masoom India — Tech Division, Kolkata, West Bengal</p>
+        <p><em>For support inquiries or questions about these Terms, reach out to us. We typically respond within 2 business days.</em></p>
     </div>
 
+    <div class="footer">
+        <p>&copy; 2026 Masoom India - Tech Division. All trademarks and registered names are properties of their respective owners.</p>
+        <p style="margin-top: 8px;">⚙️ Built with transparency | Free tools for everyone</p>
+    </div>
 </div>
 
+<!-- optional: small accessibility notice or additional ad-safe context (no extra scripts) -->
 </body>
 </html>
